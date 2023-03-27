@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //1.String 不可以被继承
 
 public class MyStringStudy {
@@ -34,6 +36,17 @@ public class MyStringStudy {
     }
 
     public static void main(String[] args) {
+        // 通过字节数组构建字符串
+        byte[] bytes = { 97, 98, 99, 100 };
+        String str = new String(bytes);
+        System.out.println(str);
+        // 字符串变成字节数组
+        byte[] bytes1 = str.getBytes();
+        System.out.println(Arrays.toString(bytes1));
+
+    }
+
+    public static void main2(String[] args) {
 
         String str = "1324566";
         boolean flag = func(str);
@@ -44,11 +57,11 @@ public class MyStringStudy {
     public static void main1(String[] args) {
         String str = "hello";
         System.out.println(str);
-        String str2 = new String("adsgg");// 
+        String str2 = new String("adsgg");//
         System.out.println(str2);
         // 数组转换为字符串
         char[] val = { '1', '2', '3' }; // 有逗号
-        String str3 =new String(val);
+        String str3 = new String(val);
         System.out.println(val);
 
         // 字符串转换为数组
@@ -57,4 +70,5 @@ public class MyStringStudy {
             System.out.println(data[i] + " ");
 
         }
-    }}
+    }
+}
